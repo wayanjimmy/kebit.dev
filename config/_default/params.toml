@@ -53,8 +53,8 @@ show_categories = true
 
 # seo meta data for OpenGraph / Twitter Card
 [metadata]
-keywords = ["Boilerplate", "Hugo"]
-description = "Hugo & Tailwindcss Starter"
+keywords = ["kebit", "kelompok", "belajar", "it"]
+description = "KElompok Belajar IT"
 author = "zeon.studio"
 image = "images/og-image.png"
 
