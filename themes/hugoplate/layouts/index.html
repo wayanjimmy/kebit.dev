@@ -1,80 +1,51 @@
 {{ define "main" }}
   {{ with site.GetPage "homepage" }}
-    <!-- Banner -->
-    {{ with .Params.banner }}
-      <section class="section pt-14">
-        <div class="container">
-          <div class="row justify-center">
-            <div class="lg:col-7 mb-8 text-center">
-              <h1 class="mb-4">
-                {{ .title | markdownify }}
-              </h1>
-              <p class="mb-8">
-                {{ .content | markdownify }}
-              </p>
-              {{ with .button }}
-                {{ if .enable }}
-                  <a class="btn btn-primary" href="{{ .link | absURL }}">
-                    {{ .label }}
-                    <i class="fa fa-arrow-right pl-2"></i>
-                  </a>
-                {{ end }}
-              {{ end }}
-            </div>
+    <section class="section pt-14">
+      <div class="container">
+        <div class="row justify-center">
+          <div class="lg:col-7">
+            <h1 class="mb-4 text-center">KElompok Belajar IT</h1>
+            <p class="mb-8">"kebit"</p>
+            <p class="mb-8">
+              In the ancient Balinese time, literate people learn from the palm
+              leaves manuscript which called lontar. The activities to read
+              these manuscript is called "ngebitang lontar", ngebitang is a verb
+              and its root word is kebit; in Balinese kebit means to turn over
+              or to flip something.
+            </p>
+            <p class="mb-8">
+              "Ngebitang lontar", it is an activity that synonymous or
+              associated with the learning activity. Where to learn something,
+              people usually read a book, walk through it (the book) by flipping
+              it. Indeed, like the modern days when we are learning, we flip the
+              book pages. In the digital term, learning means progressing and
+              progress bring changes. In the digital world, where everything are
+              in the form of zero and one (or bit), the changes comes in a form
+              of bit flipping, you change the zero into become one, we called it
+              flipping the bit, so to learn, we flip the bit.
+            </p>
+            <p class="mb-8">
+              We hope, by having kebit; as a safe place; as an indigenous
+              movement; as a collective of initiatives; we can help people in
+              togetherness to learn and share together, to turn a page and move
+              forward, to learn and flip even a single bit from its zero to one,
+              and be useful.
+            </p>
+            <p>
+              kebit: the learning collective of the collective learning because
+              learning is never ended when you graduate the school, it just
+              begun
+            </p>
           </div>
         </div>
-      </section>
-    {{ end }}
-    <!-- /Banner -->
-
-    <!-- Features -->
-    {{ range $i, $e:= .Params.features }}
-      <section class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">
-        <div class="container">
-          <div class="row items-center justify-between">
-            <div
-              class="mb:md-0 {{ if not (modBool $i 2) }}
-                md:order-2
-              {{ end }} md:col-5 mb-6">
-              {{ partial "image" (dict "Src" .image "Alt" "feature image") }}
-            </div>
-            <div
-              class="{{ if not (modBool $i 2) }}
-                md:order-1
-              {{ end }} md:col-7 lg:col-6">
-              <h2 class="mb-4">
-                {{ .title | markdownify }}
-              </h2>
-              <p class="mb-8 text-lg">
-                {{ .content | markdownify }}
-              </p>
-              <ul>
-                {{ range .bulletpoints }}
-                  <li class="relative mb-4 pl-6">
-                    <i class="fa fa-check absolute left-0 top-1.5"></i>
-                    {{ . | markdownify }}
-                  </li>
-                {{ end }}
-              </ul>
-              {{ with .button }}
-                {{ if .enable }}
-                  <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">
-                    {{ .label }}
-                    <i class="fa fa-arrow-right pl-2"></i>
-                  </a>
-                {{ end }}
-              {{ end }}
-            </div>
-          </div>
-        </div>
-      </section>
-    {{ end }}
-    <!-- /Features -->
+      </div>
+    </section>
 
     <section class="section">
       <div class="container">
-        <div class="row">
+        <div class="row justify-center">
           <div class="grid place-items-center">
+            <h1 class="mb-4">Join us!</h1>
             <div
               class="cursor-default select-none space-y-2 rounded-sm bg-[#f2f3f5] p-4 dark:bg-[#2b2d31] shadow-xl">
               <p
@@ -96,41 +67,14 @@
                       ><h1
                         class="cursor-pointer font-normal text-[#060607] hover:underline dark:text-white">
                         Discord
-                      </h1></a
-                    >
-                    <div
-                      class="flex items-center justify-between gap-3 text-xs">
-                      <p class="text-[#80848e]">
-                        <span class="inline-flex"
-                          ><svg
-                            class="h-[0.6rem] w-[0.6rem] fill-[#23a559]"
-                            stroke-width="0"
-                            viewBox="0 0 512 512"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M256 23.05C127.5 23.05 23.05 127.5 23.05 256S127.5 488.9 256 488.9 488.9 384.5 488.9 256 384.5 23.05 256 23.05z"></path></svg
-                        ></span>
-                        560 Online
-                      </p>
-                      <p class="text-[#80848e]">
-                        <span class="inline-flex"
-                          ><svg
-                            class="h-[0.6rem] w-[0.6rem] fill-[#b5bac1] dark:fill-[#4e5058]"
-                            stroke-width="0"
-                            viewBox="0 0 512 512"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M256 23.05C127.5 23.05 23.05 127.5 23.05 256S127.5 488.9 256 488.9 488.9 384.5 488.9 256 384.5 23.05 256 23.05z"></path></svg
-                        ></span>
-                        3,632 Members
-                      </p>
-                    </div>
+                      </h1>
+                    </a>
                   </div>
                 </div>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://discord.com"
+                  href="https://discord.gg/bX2G8TnDHa"
                   ><button
                     class="focus-visible:ring-ring ring-offset-background inline-flex h-10 items-center justify-center rounded-md bg-[#248046] px-4 py-2 text-sm font-medium text-[#e9ffec] transition-colors hover:bg-[#1a6334] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
                     Join
