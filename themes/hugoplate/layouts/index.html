@@ -21,9 +21,6 @@
                 {{ end }}
               {{ end }}
             </div>
-            <div class="col-12">
-              {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto" "Size" "800x") }}
-            </div>
           </div>
         </div>
       </section>
@@ -73,6 +70,78 @@
       </section>
     {{ end }}
     <!-- /Features -->
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="grid place-items-center">
+            <div
+              class="cursor-default select-none space-y-2 rounded-sm bg-[#f2f3f5] p-4 dark:bg-[#2b2d31] shadow-xl">
+              <p
+                class="text-xs font-semibold uppercase text-[#4e5058] dark:text-[#b5bac1]">
+                You've been invited to join a server
+              </p>
+              <div class="flex items-center justify-between gap-16">
+                <div class="flex items-center gap-4">
+                  <img
+                    src="https://cdn.discordapp.com/embed/avatars/0.png?size=128"
+                    alt="Discord"
+                    class="h-14 w-14 rounded-xl"
+                    draggable="false" />
+                  <div>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://discord.com"
+                      ><h1
+                        class="cursor-pointer font-normal text-[#060607] hover:underline dark:text-white">
+                        Discord
+                      </h1></a
+                    >
+                    <div
+                      class="flex items-center justify-between gap-3 text-xs">
+                      <p class="text-[#80848e]">
+                        <span class="inline-flex"
+                          ><svg
+                            class="h-[0.6rem] w-[0.6rem] fill-[#23a559]"
+                            stroke-width="0"
+                            viewBox="0 0 512 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M256 23.05C127.5 23.05 23.05 127.5 23.05 256S127.5 488.9 256 488.9 488.9 384.5 488.9 256 384.5 23.05 256 23.05z"></path></svg
+                        ></span>
+                        560 Online
+                      </p>
+                      <p class="text-[#80848e]">
+                        <span class="inline-flex"
+                          ><svg
+                            class="h-[0.6rem] w-[0.6rem] fill-[#b5bac1] dark:fill-[#4e5058]"
+                            stroke-width="0"
+                            viewBox="0 0 512 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M256 23.05C127.5 23.05 23.05 127.5 23.05 256S127.5 488.9 256 488.9 488.9 384.5 488.9 256 384.5 23.05 256 23.05z"></path></svg
+                        ></span>
+                        3,632 Members
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://discord.com"
+                  ><button
+                    class="focus-visible:ring-ring ring-offset-background inline-flex h-10 items-center justify-center rounded-md bg-[#248046] px-4 py-2 text-sm font-medium text-[#e9ffec] transition-colors hover:bg-[#1a6334] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+                    Join
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Testimonials -->
     {{ with site.GetPage "sections/testimonial" }}
